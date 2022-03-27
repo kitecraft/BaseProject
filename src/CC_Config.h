@@ -1,6 +1,6 @@
 #pragma once
 
-#define __DEVICE_NAME__ "BaseProject"
+#define __DEVICE_NAME__ "CandyCrane"
 #define __DEVICE_VERSION__ "0.1"
 
 #define NETWORK_WAIT_TIME_PER_TRY 10 //seconds

@@ -36,10 +36,7 @@ void IRAM_ATTR handleOTA(void*)
                 if (percentage != g_OTA_Completion_Percentage)
                 {
                     g_OTA_Completion_Percentage = percentage;
-                    if (!(percentage)) {
-                        Serial.println("OTA FIRMWARE UPDATE PROGRESS: " + String(percentage) + "%");
-                    }
-
+                    Serial.println("OTA FIRMWARE UPDATE PROGRESS: " + String(percentage) + "%");
                 }
                     })
 
