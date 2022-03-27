@@ -19,15 +19,6 @@ TaskHandle_t g_OTAHandler = nullptr;
 EspNowIncomingMessageQueue g_espNowMessageQueue;
 
 
-
-#define NEXT_BUCKET_ACTION_DELAY 3000
-unsigned long nextBucketAction = 0;
-bool ccBucketStatus = false;
-
-#define NEXT_GET_DISTANCE_ACTION_DELAY 5000
-unsigned long nextGetDistanceAction = 0;
-
-
 bool setupComplete = true;
 void setup() {
     Serial.begin(115200);
@@ -64,33 +55,6 @@ void setup() {
 void loop() {
     HandleEspNowData();
 
-    /*
-    if (nextBucketAction < millis())
-    {
-        if (ccBucketStatus)
-        {
-            Serial.print("Sending Close... ");
-            SendEspNowCommand(CC_CLOSE_BUCKET);
-        }
-        else
-        {
-            Serial.print("Sending Open... ");
-            SendEspNowCommand(CC_OPEN_BUCKET);
-        }
-        
-        ccBucketStatus = !ccBucketStatus;
-        nextBucketAction = millis() + NEXT_BUCKET_ACTION_DELAY;
-        Serial.println("Command has been sent");
-    }
-
-    if (nextGetDistanceAction < millis())
-    {
-        Serial.print("Requesting distance... ");
-        SendEspNowCommand(CC_GET_DISTANCE);
-        Serial.println("Distance Requested");
-        nextGetDistanceAction = millis() + NEXT_GET_DISTANCE_ACTION_DELAY;
-    }
-    */
 }
 
 void HandleEspNowData()
