@@ -1,0 +1,14 @@
+#pragma once
+#include <Arduino.h>
+
+enum CANDY_CRANE_COMMANDS {
+    CC_NONE = -1,
+    CC_OPEN_BUCKET,
+    CC_CLOSE_BUCKET,
+    CC_BUCKET_MOVE_COMPLETE,
+    CC_GET_DISTANCE,
+    CC_START_DISTANCE_STREAM,
+    CC_END_DISTANCE_STREAM,
+
+    CC_ACK_COMMAND,
+};
